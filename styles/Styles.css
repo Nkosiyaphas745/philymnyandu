@@ -1,0 +1,237 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image:linear-gradient(
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3) ) , url(../pictures/write.jpg);
+    width: 99%;
+    background-size: cover;
+    font-family: "Poppins" , sans-serif;
+    
+}
+
+/*Navigation*/
+
+header{
+display: flex;
+align-items: center;
+width: 99%;
+height: 16vh;
+
+}
+
+.logo{
+    flex: 1;
+}
+
+.empty{
+    flex: 1;
+}
+
+nav{
+    justify-self: flex-end;
+    flex: 1;
+    min-height: 8vh;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.nav-link a {
+    text-decoration: none;
+    padding: 0.25em o.75em;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    
+}
+
+.nav-link  :hover {
+    background-color: darkorange;
+}
+/*.current-page {
+    border-bottom: 2px solid white;
+}*/
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+/*banner*/
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+
+.banner h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.banner p {
+    font-size: 1.125rem;
+}
+
+.inside-link{
+    text-decoration:underline ;
+    font-family: "Poppins" , sans-serif;
+    color: white;
+}
+
+.watch {
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+    font-style: none;
+}
+
+.button {
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 5px;
+    font-family: "Poppins" , sans-serif;
+    font-size: 1.125rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.watch :hover {
+   background-color: darkorange;
+}
+
+.writings-container {
+   display: flex;
+   justify-content: space-around;
+}
+
+/*social icons*/
+
+h1 {
+    text-align: center;
+    color: white;
+  }
+  .social-menu ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      margin: 0;
+      display: flex;
+  }
+  .social-menu ul li {
+      list-style: none;
+      margin: 0 10px;
+  }
+  .social-menu ul li .fa {
+      color: #000000;
+      font-size: 25px;
+      line-height: 50px;
+      transition: .5s;
+  }
+  .social-menu ul li .fa:hover {
+      color: #ffffff;
+  }
+  .social-menu ul li a {
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      text-align: center;
+      transition: 0.5s;
+      transform: translate(0,0px);
+      box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+  }
+  .social-menu ul li a:hover {
+      transform: rotate(0deg) skew(0deg) translate(0, -10px);
+  }
+  .social-menu ul li:nth-child(1) a:hover {
+      background-color: #3b5999;
+  }
+  .social-menu ul li:nth-child(2) a:hover {
+      background-color: #55acee;
+  }
+  .social-menu ul li:nth-child(3) a:hover {
+      background-color: #e4405f;
+  }
+  .social-menu ul li:nth-child(4) a:hover {
+      background-color: #cd201f;
+  }
+  .social-menu ul li:nth-child(5) a:hover {
+      background-color: #0077B5;
+  }
+
+/*mobile responsiveness*/
+@media screen and (max-width:990px){
+    body{
+       /* overflow-x: hidden; */
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20%;
+       /* transform: translateX(100%);
+        transition: ;transform 0.5s ease-in;*/
+    }
+    .nav-links li{
+        /*opacity: 0;*/
+    }
+    .burger{
+       /* display: block;
+        float:right;*/
+    }
+
+@media (max-width:480px){
+    .header {
+        min-height: 100vh;
+    }
+    .nav-links{
+        display: block;
+    }
+
+    .nav-link a{
+        padding: 5px;
+        font-size: 15px;
+        margin-top:20px ;
+    }
+
+    .writings-container {
+        display: flex;
+        flex-flow:column wrap ;
+        justify-content: space-between;
+     }
+    
+}
+
+
